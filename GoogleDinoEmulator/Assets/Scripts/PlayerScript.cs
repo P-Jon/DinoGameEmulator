@@ -2,52 +2,57 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerScript : MonoBehaviour {
-
+public class PlayerScript : MonoBehaviour
+{
     public float jumpHeight;
     public float baseSpeed;
     public float playerScore; // Public for debugging
     public float playerSpeed;
     public Transform groundCheck;
 
-    bool isGround = false;
-    Vector3 playerVelocity;
-    
+    private bool isGround = false;
+    private Vector3 playerVelocity;
 
-	void Start () {
-        playerVelocity = Vector2.zero;    
+    private void Start()
+    {
+        playerVelocity = Vector2.zero;
+        playerSpeed = baseSpeed;
     }
 
-    void Update()
+    private void Update()
     {
         isGround = Physics2D.Linecast(transform.position, groundCheck.position, 1 << LayerMask.NameToLayer("Ground"));
         playerScore = transform.position.x / 4;
-        playerSpeed = baseSpeed;
-       
-        if (playerScore > 12 && playerScore < 100) {
+
+        if (playerScore >= 100f)
+            playerSpeed = 40;
+        else if (playerScore > 12)
             playerSpeed = playerScore;
-        }
-        else if (playerScore >= 100) {
-            playerSpeed = 100;
-        }
 
         playerVelocity.x = Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime;
 
-        if ((Input.GetKey(KeyCode.W)) && (isGround)) {
+        if ((Input.GetKey(KeyCode.W)) && (isGround))
+        {
             playerVelocity.y = jumpHeight;
             isGround = false;
         }
-        else{
+        else
+        {
             playerVelocity.y = GetComponent<Rigidbody2D>().velocity.y;
         }
+
         playerVelocity.x = playerSpeed;
     }
-    void FixedUpdate(){
+
+    private void FixedUpdate()
+    {
         GetComponent<Rigidbody2D>().velocity = playerVelocity;
     }
-    
-    void OnTriggerEnter2D(Collider2D other){
-        if (other.gameObject.CompareTag("Enemy")){
+
+    private void OnTriggerEnter2D(Collider2D other)
+    {
+        if (other.gameObject.CompareTag("Enemy"))
+        {
             Time.timeScale = 0;
         }
     }
