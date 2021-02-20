@@ -5,9 +5,9 @@ using UnityEngine;
 public class CameraScript : MonoBehaviour
 {
     public GameObject player;
-
+    public int xOffset;
     private void Update()
     {
-        this.gameObject.transform.position = new Vector3((player.gameObject.transform.position.x + 3), 2, this.gameObject.transform.position.z);
+        this.gameObject.transform.position = new Vector3((player.gameObject.transform.position.x + xOffset), 2, this.gameObject.transform.position.z);
     }
 }
