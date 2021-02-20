@@ -67,6 +67,8 @@
     <Compile Include="Assets\Scripts\PlayerScript.cs" />
     <Compile Include="Assets\Scripts\SpawnManager.cs" />
     <Compile Include="Assets\Scripts\TerrainManager.cs" />
+    <Compile Include="Assets\Scripts\TitleToGameHandler.cs" />
+    <Compile Include="Assets\Scripts\TweeningText.cs" />
     <Reference Include="UnityEngine">
       <HintPath>G:/Unity/2019.3.13f1/Editor/Data/Managed/UnityEngine/UnityEngine.dll</HintPath>
     </Reference>
