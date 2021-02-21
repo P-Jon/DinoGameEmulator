@@ -15,6 +15,7 @@ public class PlayerScript : MonoBehaviour
 
     private bool isGround = false;
     private Vector3 playerVelocity;
+    public GameUIManager _uiManager;
 
     private void Start()
     {
@@ -31,6 +32,9 @@ public class PlayerScript : MonoBehaviour
         StartCoroutine(updateUI());
 
         playerVelocity.x = Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime;
+
+        if (Input.GetKey(KeyCode.Escape))
+            _uiManager.ExitGame();
 
         if ((Input.GetKey(KeyCode.W)) && (isGround))
         {
@@ -55,6 +59,7 @@ public class PlayerScript : MonoBehaviour
         if (other.gameObject.CompareTag("Enemy"))
         {
             Time.timeScale = 0;
+            _uiManager.GameOverScreen();
         }
     }
 
