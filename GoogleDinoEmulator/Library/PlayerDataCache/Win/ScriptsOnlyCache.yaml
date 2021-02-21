@@ -2,6 +2,8 @@ ScriptsOnlyBuild:
   usedScripts:
     Assembly-CSharp.dll:
     - CameraScript
+    - DestroyAfterTime
+    - GameUIManager
     - PlayerScript
     - SpawnManager
     - TerrainManager
@@ -61,19 +63,27 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11310}
     - Class: 114
+      Script: {instanceID: 11350}
+    - Class: 114
       Script: {instanceID: 11496}
     - Class: 114
       Script: {instanceID: 11668}
     - Class: 114
       Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 12068}
+      Script: {instanceID: 11876}
     - Class: 114
-      Script: {instanceID: 12596}
+      Script: {instanceID: 12070}
     - Class: 114
-      Script: {instanceID: 12692}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12946}
+      Script: {instanceID: 12598}
+    - Class: 114
+      Script: {instanceID: 12694}
+    - Class: 114
+      Script: {instanceID: 12880}
+    - Class: 114
+      Script: {instanceID: 12950}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 124
@@ -124,13 +134,13 @@ ScriptsOnlyBuild:
     - Class: 114
       Script: {instanceID: 11736}
     - Class: 114
-      Script: {instanceID: 12118}
+      Script: {instanceID: 12120}
     - Class: 114
-      Script: {instanceID: 12550}
+      Script: {instanceID: 12552}
     - Class: 114
-      Script: {instanceID: 12596}
+      Script: {instanceID: 12598}
     - Class: 114
-      Script: {instanceID: 12946}
+      Script: {instanceID: 12950}
     - Class: 115
       Script: {instanceID: 0}
     - Class: 128
@@ -270,7 +280,7 @@ ScriptsOnlyBuild:
     className: PhysicsRaycaster
   - hash:
       serializedVersion: 2
-      Hash: cb97935f3a2e89ad99743e8a3923f950
+      Hash: b0f53cccf7393faf175c1a51fb2abfc6
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: PlayerScript
@@ -354,6 +364,12 @@ ScriptsOnlyBuild:
     className: Selectable
   - hash:
       serializedVersion: 2
+      Hash: 7e799b8c76e0a73f8127549afd8619c3
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: GameUIManager
+  - hash:
+      serializedVersion: 2
       Hash: b3ab2106268377ffe25dd18ac23dca28
     assemblyName: Unity.TextMeshPro.dll
     namespaceName: TMPro
@@ -384,7 +400,7 @@ ScriptsOnlyBuild:
     className: RemoteTestResultSender
   - hash:
       serializedVersion: 2
-      Hash: 83e769eee07fc231384c812eedbb8224
+      Hash: a3677c017ca25bfbb3811324f3a03955
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: CameraScript
@@ -492,7 +508,7 @@ ScriptsOnlyBuild:
     className: BeforeAfterTestCommandState
   - hash:
       serializedVersion: 2
-      Hash: c3bd28d70a816c13803632fef9200256
+      Hash: 47bf8efcfa5415f9127908b551651936
     assemblyName: Assembly-CSharp.dll
     namespaceName: 
     className: TerrainManager
@@ -526,6 +542,12 @@ ScriptsOnlyBuild:
     assemblyName: UnityEngine.TestRunner.dll
     namespaceName: UnityEngine.TestTools.TestRunner.Callbacks
     className: PlayModeRunnerCallback
+  - hash:
+      serializedVersion: 2
+      Hash: 43c3e00389c7da8d42cc42c6ca145a58
+    assemblyName: Assembly-CSharp.dll
+    namespaceName: 
+    className: DestroyAfterTime
   - hash:
       serializedVersion: 2
       Hash: 71bb6a6b6c8f052f948db64c7dd3ca4f

@@ -43,8 +43,7 @@ public class TerrainManager : MonoBehaviour
 
         if (obstacleLock == false)
         {
-            var r = Random.Range(0, 300);
-
+            var r = Random.Range(0, 10);
             obstacleLock = true;
 
             if (r == 1)
