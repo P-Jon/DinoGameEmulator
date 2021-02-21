@@ -630,4 +630,4 @@ ScriptsOnlyBuild:
   scenePathNames:
   - Assets/Scenes/TitleScreen.unity
   - Assets/Scenes/Main_Scene-1.unity
-  playerPath: C:/Users/prinsesse/Downloads/Dinogame/Build/GoogleDinoEmulator.exe
+  playerPath: C:/Users/prinsesse/Downloads/Dinogame/Build/Win/GoogleDinoEmulator.exe

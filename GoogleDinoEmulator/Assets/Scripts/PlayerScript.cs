@@ -33,6 +33,9 @@ public class PlayerScript : MonoBehaviour
 
         playerVelocity.x = Input.GetAxis("Horizontal") * playerSpeed * Time.deltaTime;
 
+        if (Input.GetKey(KeyCode.Escape))
+            _uiManager.ExitGame();
+
         if ((Input.GetKey(KeyCode.W)) && (isGround))
         {
             playerVelocity.y = jumpHeight;

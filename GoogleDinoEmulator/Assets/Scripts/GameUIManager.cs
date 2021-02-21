@@ -18,4 +18,9 @@ public class GameUIManager : MonoBehaviour
         SceneManager.LoadScene("Main_Scene-1");
         Time.timeScale = 1;
     }
+
+    public void ExitGame()
+    {
+        Application.Quit();
+    }
 }
